@@ -1,0 +1,16 @@
+{
+  "name": "3-mongo-platos",
+  "version": "1.0.0",
+  "description": "ejercicio meeting Sprint 2 - Mongo - Platos",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "author": "Julio Cesar Marquez",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.7"
+  }
+}
