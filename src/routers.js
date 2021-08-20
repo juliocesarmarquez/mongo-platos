@@ -3,10 +3,10 @@ const { crearPlato, buscarPlatos, actualizarPlato, eliminarPlato, buscarUnPlato,
 const router = express();
 
 router.use(express.json());
+/* router.use("/", midPlato); */
 
 router.get("/platos", buscarPlatos);
 router.post("/platos", crearPlato);
-router.use("/", midPlato);
 router.put("/platos", actualizarPlato);
 router.delete("/platos", eliminarPlato);
 router.get("/buscarplato", buscarUnPlato);

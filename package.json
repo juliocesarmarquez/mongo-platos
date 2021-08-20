@@ -4,7 +4,7 @@
   "description": "ejercicio meeting Sprint 2 - Mongo - Platos",
   "main": "index.js",
   "scripts": {
-    "start": "node src/app.js"
+    "start": "node ./src/app.js"
   },
   "author": "Julio Cesar Marquez",
   "license": "ISC",

@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 
 const schemaPlato = new mongoose.Schema({plato:String, precio:String, tipo_de_plato:String});
-const plato = new mongoose.model("plato", schemaPlato);
+const platos = new mongoose.model("platos", schemaPlato);
 
 module.exports = {
-    plato
+    platos
 };
