@@ -1,17 +1,22 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const dotenv = require("dotenv");
 const { router } = require("./routers.js");
 
 function main() {
+    dotenv.config();
+    const port = process.env.PORT;
+    const url = process.env.DB;
+
     const server = express();
-    mongoose.connect('mongodb://localhost:27017/menu',{ useNewUrlParser: true, useUnifiedTopology: true }, (err, res)=> {
+    mongoose.connect(url,{ useNewUrlParser: true, useUnifiedTopology: true }, (err, res)=> {
         
         if (err) throw error
         console.log('Conexión a la base de datos establecida...')
         
     })
     server.use(router);
-    server.listen(3000, () => console.log("servidor escuchando en puerto 3000"));
+    server.listen(port, () => console.log(`servidor escuchando en puerto ${port}`));
 }
 
 main();
